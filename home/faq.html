@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FAQ — Zentra Home | Answers before you book</title>
+<meta name="description" content="Pricing, scheduling, access, products, policies, and what happens if something goes wrong. Straight answers about Zentra Home residential cleaning.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0C2033;--navy-2:#16344F;--navy-3:#081726;
+  --teal:#17B3A6;--teal-2:#0E8F86;--teal-soft:#E4F6F4;
+  --warm:#F8F6F2;--warm-2:#F0ECE4;--line:#E2DCD2;--line-2:#EEE9E1;
+  --slate:#57697A;--slate-2:#7B8A99;
+  --r:18px;--wrap:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+[id]{scroll-margin-top:100px}
+body{margin:0;background:var(--warm);color:var(--navy);
+  font-family:"Figtree",system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.62;
+  -webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,h4{font-family:"Bricolage Grotesque","Figtree",sans-serif;font-weight:600;
+  letter-spacing:-.025em;margin:0;line-height:1.1}
+h1{font-size:clamp(2.3rem,5vw,3.5rem);line-height:1.05}
+h2{font-size:clamp(1.5rem,2.6vw,1.95rem)}
+p{margin:0}
+a:focus-visible,button:focus-visible,input:focus-visible,summary:focus-visible{
+  outline:2.5px solid var(--teal-2);outline-offset:3px;border-radius:6px}
+
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.narrow{max-width:920px}
+.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-2)}
+.lede{color:var(--slate);font-size:1.05rem;max-width:58ch}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-family:"Figtree",sans-serif;font-size:.96rem;font-weight:600;padding:15px 28px;
+  border-radius:999px;border:1.5px solid transparent;text-decoration:none;cursor:pointer;
+  transition:.18s;white-space:nowrap}
+.btn.fill{background:var(--navy);color:#fff}
+.btn.fill:hover{background:var(--navy-2);transform:translateY(-1px)}
+.btn.line{background:transparent;color:var(--navy);border-color:var(--navy)}
+.btn.line:hover{background:var(--navy);color:#fff}
+.btn.sm{padding:11px 20px;font-size:.9rem}
+
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+.brand svg{width:30px;height:30px;flex:none}
+.brand .wm{display:flex;flex-direction:column;line-height:1}
+.brand .wm b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.42rem;font-weight:700;letter-spacing:-.03em}
+.brand .wm span{font-size:.6rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--slate-2);padding-top:4px;padding-left:2px}
+.brand.inv .wm b{color:#fff}
+.brand.inv .wm span{color:#8FA6BC}
+
+header{position:sticky;top:0;z-index:70;background:rgba(248,246,242,.94);
+  backdrop-filter:blur(12px);border-bottom:1px solid var(--line-2)}
+header .wrap{display:flex;align-items:center;gap:26px;padding-top:14px;padding-bottom:14px}
+nav{display:flex;gap:26px;margin-left:auto}
+nav a{text-decoration:none;font-size:.94rem;font-weight:500;color:var(--slate)}
+nav a:hover{color:var(--teal-2)}
+nav a.on{color:var(--navy);font-weight:600}
+.hact{display:flex;gap:10px;align-items:center}
+.menu-btn{display:none;margin-left:auto;background:none;border:1.5px solid var(--line);
+  border-radius:999px;padding:9px 16px;font-size:.85rem;font-weight:600;cursor:pointer;color:var(--navy)}
+
+/* ---------- hero + search ---------- */
+.phero{padding:52px 0 0}
+.crumb{font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--slate-2);margin-bottom:18px}
+.crumb a{text-decoration:none}
+.crumb a:hover{color:var(--teal-2)}
+.phero .lede{margin-top:18px}
+
+.search{position:relative;margin-top:32px;max-width:560px}
+.search input{width:100%;height:58px;border:1.5px solid var(--line);border-radius:999px;
+  padding:0 52px 0 52px;font-family:"Figtree",sans-serif;font-size:1rem;color:var(--navy);
+  background:#fff;transition:.16s}
+.search input:hover{border-color:var(--slate-2)}
+.search input::placeholder{color:#9CA9B7}
+.search .ic{position:absolute;left:20px;top:50%;transform:translateY(-50%);width:19px;height:19px;
+  color:var(--slate-2);pointer-events:none}
+.search .clr{position:absolute;right:16px;top:50%;transform:translateY(-50%);border:0;
+  background:var(--warm-2);color:var(--slate);width:28px;height:28px;border-radius:50%;
+  cursor:pointer;font-size:1rem;line-height:1;display:none}
+.search .clr.on{display:block}
+.search .clr:hover{background:var(--navy);color:#fff}
+.count{margin-top:14px;font-size:.87rem;color:var(--slate);min-height:1.4em}
+.count b{color:var(--navy);font-weight:600}
+
+.jump{display:flex;gap:9px;flex-wrap:wrap;margin-top:26px;padding-bottom:8px}
+.jump a{font-size:.85rem;font-weight:600;text-decoration:none;color:var(--slate);
+  background:#fff;border:1px solid var(--line-2);border-radius:999px;padding:9px 16px;transition:.15s}
+.jump a:hover{border-color:var(--teal-2);color:var(--teal-2)}
+
+/* ---------- faq groups ---------- */
+.groups{padding:44px 0 88px}
+.grp{background:#fff;border:1px solid var(--line-2);border-radius:24px;padding:32px 34px;
+  margin-bottom:22px}
+.grp.hide{display:none}
+.ghead{display:flex;align-items:center;gap:16px;margin-bottom:8px}
+.ghead .ic{width:48px;height:48px;border-radius:14px;background:var(--teal-soft);
+  color:var(--teal-2);display:flex;align-items:center;justify-content:center;flex:none}
+.ghead .ic svg{width:23px;height:23px}
+.ghead h2{font-size:1.42rem}
+.ghead .n{margin-left:auto;font-size:.75rem;font-weight:600;color:var(--slate-2);
+  background:var(--warm);border-radius:999px;padding:5px 12px;white-space:nowrap}
+
+.qa{border-bottom:1px solid var(--line-2)}
+.qa.hide{display:none}
+.qa:last-of-type{border-bottom:0}
+.qa summary{display:flex;align-items:flex-start;gap:14px;padding:18px 0;cursor:pointer;
+  font-weight:600;font-size:1.01rem;list-style:none;line-height:1.4}
+.qa summary::-webkit-details-marker{display:none}
+.qa summary .num{color:var(--teal-2);font-weight:700;flex:none;font-variant-numeric:tabular-nums}
+.qa summary .chev{margin-left:auto;flex:none;width:15px;height:15px;color:var(--teal-2);
+  transition:transform .22s;margin-top:5px}
+.qa[open] summary .chev{transform:rotate(180deg)}
+.qa .ans{padding:0 0 20px 30px;color:var(--slate);font-size:.95rem;max-width:70ch}
+.qa .ans p+p{margin-top:12px}
+.qa .ans ul{margin:12px 0 0;padding:0;list-style:none;display:grid;gap:7px}
+.qa .ans li{padding-left:20px;position:relative;font-size:.92rem}
+.qa .ans li::before{content:"";position:absolute;left:0;top:.5em;width:6px;height:6px;
+  border-radius:50%;background:var(--teal)}
+.qa .ans a{color:var(--teal-2);font-weight:600}
+mark{background:#FFF1B8;color:inherit;border-radius:3px;padding:0 2px}
+
+.empty{display:none;text-align:center;background:#fff;border:1px solid var(--line-2);
+  border-radius:24px;padding:56px 30px}
+.empty.on{display:block}
+.empty h2{margin-bottom:12px}
+.empty p{color:var(--slate);max-width:44ch;margin:0 auto}
+.empty .btn{margin-top:24px}
+
+/* ---------- cta ---------- */
+.cta-band{background:var(--navy);color:#fff;text-align:center}
+.cta-band .wrap{padding:76px 24px}
+.cta-band h2{color:#fff;font-size:clamp(1.8rem,3.2vw,2.5rem);max-width:20ch;margin:0 auto}
+.cta-band p{color:#A7BACB;margin:16px auto 0;max-width:50ch}
+.cta-band .row{display:flex;gap:12px;justify-content:center;margin-top:30px;flex-wrap:wrap}
+.cta-band .btn.line{color:#fff;border-color:rgba(255,255,255,.45)}
+.cta-band .btn.line:hover{background:#fff;color:var(--navy)}
+.cta-band .btn.fill{background:var(--teal);color:var(--navy)}
+.cta-band .btn.fill:hover{background:#fff}
+
+footer{background:var(--navy-3);color:#A7BACB}
+footer .wrap{padding-top:64px;padding-bottom:40px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px}
+.fgrid h4{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:#fff;margin:0 0 16px}
+.fgrid p,.fgrid li{font-size:.88rem}
+.fgrid ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.fgrid a{text-decoration:none}
+.fgrid a:hover{color:var(--teal)}
+.fabout p{margin-top:18px;max-width:32ch}
+.serving{font-size:.86rem;line-height:1.9}
+.fbot{margin-top:52px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);
+  display:flex;gap:20px;flex-wrap:wrap;font-size:.8rem}
+.fbot .sp{margin-left:auto}
+
+@media(max-width:1000px){
+  nav{display:none}
+  nav.open{display:flex;position:absolute;top:100%;left:0;right:0;background:#fff;
+    flex-direction:column;gap:0;padding:6px 24px 16px;border-bottom:1px solid var(--line);
+    box-shadow:0 14px 30px rgba(12,32,51,.1)}
+  nav.open a{padding:13px 0;border-bottom:1px solid var(--line-2)}
+  .menu-btn{display:block}
+  header .wrap{position:relative}
+  .hact{display:none}
+  .fgrid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:620px){
+  body{font-size:16px}
+  .wrap{padding:0 18px}
+  .grp{padding:24px 20px;border-radius:18px}
+  .ghead{flex-wrap:wrap;gap:12px}
+  .ghead .n{margin-left:0}
+  .qa .ans{padding-left:0}
+  .groups{padding:32px 0 64px}
+  .fgrid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){*{transition-duration:.001ms!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="zstar" viewBox="0 0 32 32">
+    <path d="M16 1.5c.9 5.6 2.4 8.9 5 11 2.5 2.1 5.6 2.9 9.5 3.5-3.9.6-7 1.4-9.5 3.5-2.6 2.1-4.1 5.4-5 11-.9-5.6-2.4-8.9-5-11-2.5-2.1-5.6-2.9-9.5-3.5 3.9-.6 7-1.4 9.5-3.5 2.6-2.1 4.1-5.4 5-11z" fill="currentColor"/>
+  </symbol>
+  <symbol id="chev" viewBox="0 0 24 24"><path d="M5 9l7 7 7-7" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+</defs></svg>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg style="color:var(--teal-2)"><use href="#zstar"/></svg>
+      <span class="wm"><b>zentra</b><span>Home</span></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav">
+      <a href="services.html">Services</a>
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#areas">Areas</a>
+      <a class="on" href="faq.html">FAQ</a>
+    </nav>
+    <div class="hact">
+      <a class="btn line sm" href="tel:+16502182133">(650) 218-2133</a>
+      <a class="btn fill sm" href="index.html#quote">Get a free quote</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== hero + search ===== -->
+<section class="phero">
+  <div class="wrap narrow">
+    <div class="crumb"><a href="index.html">Home</a> / FAQ</div>
+    <span class="eyebrow">Frequently asked</span>
+    <h1 style="margin-top:14px">Answers, before you book.</h1>
+    <p class="lede">Pricing, access, products, policies, and what happens when something goes wrong. If your question isn't here, ask us and we'll add it.</p>
+
+    <div class="search">
+      <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+           stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.6-3.6"/></svg>
+      <input id="q" type="search" placeholder="Search questions — try “pets” or “cancel”"
+             aria-label="Search frequently asked questions" autocomplete="off">
+      <button class="clr" id="clr" type="button" aria-label="Clear search">&times;</button>
+    </div>
+    <p class="count" id="count" role="status" aria-live="polite"></p>
+
+    <div class="jump" id="jump">
+      <a href="#general">General</a>
+      <a href="#pricing">Pricing &amp; payment</a>
+      <a href="#prep">Preparing your home</a>
+      <a href="#team">Our team &amp; products</a>
+      <a href="#access">Access &amp; scheduling</a>
+      <a href="#policies">Policies &amp; limits</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== groups ===== -->
+<div class="groups">
+  <div class="wrap narrow" id="list">
+
+    <!-- GENERAL -->
+    <section class="grp" id="general">
+      <div class="ghead">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 10.5L12 3l9 7.5"/><path d="M5 9.5V20h14V9.5"/><path d="M10 20v-5h4v5"/></svg></span>
+        <h2>General</h2>
+        <span class="n">6 questions</span>
+      </div>
+
+      <details class="qa" open>
+        <summary><span class="num">1.</span> What does a standard cleaning include?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>Kitchen surfaces and sink, all bathrooms cleaned and sanitized, dusting throughout, mirrors and glass, beds made, every floor vacuumed and mopped, and trash emptied. Baseboards, ceiling fans, window sills, and cabinet fronts rotate through so nothing goes untouched over time.</p>
+        <p>The <a href="services.html">services page</a> has the full room-by-room checklist for each service.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">2.</span> What services do you offer?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>Four:</p>
+        <ul>
+          <li><b>Initial deep clean</b> — the full reset most homes start with</li>
+          <li><b>Recurring cleaning</b> — weekly, biweekly, or monthly</li>
+          <li><b>Move in / move out</b> — empty-home cleaning to a landlord's standard</li>
+          <li><b>Dedicated home helper</b> — hourly, for cleaning plus laundry, organizing, and errands</li>
+        </ul></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">3.</span> What's the difference between a deep clean and a regular clean?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>A deep clean goes after accumulated build-up — grout, baseboards, vent covers, inside the microwave, the tops of door frames, behind the toilet. It takes a crew and a few hours.</p>
+        <p>A regular clean maintains what the deep clean established. It's faster and cheaper because the hard part is already done.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">4.</span> Why does the first cleaning cost more?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>Because it's doing more work. Bringing a home to a maintainable baseline takes significantly more time than holding it there. Once that baseline exists, every visit afterward is faster — and you pay your recurring rate, not the deep clean rate.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">5.</span> How long does a cleaning take?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>A recurring visit on an average Peninsula home runs about two to three hours with a crew. An initial deep clean on the same home is usually four to six. Move-out cleans vary most, because an empty house means every cabinet and closet is in scope.</p>
+        <p>We'll give you a time estimate when we confirm your booking.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">6.</span> Are you the same company as Zentra Facility Solutions?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>Yes. Zentra Facility Solutions handles commercial work — offices, medical suites, government buildings. Zentra Home is the residential side. Same ownership, same training, same quality inspection process.</p></div>
+      </details>
+    </section>
+
+    <!-- PRICING -->
+    <section class="grp" id="pricing">
+      <div class="ghead">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2.5" y="5.5" width="19" height="13" rx="2.5"/><path d="M2.5 10h19"/><path d="M6 14.5h4"/></svg></span>
+        <h2>Pricing &amp; payment</h2>
+        <span class="n">6 questions</span>
+      </div>
+
+      <details class="qa">
+        <summary><span class="num">1.</span> How is the price determined?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>Square footage sets the base, then bedroom and bathroom count adjust it — bathrooms are the single biggest driver of how long a home takes. Service type sets the rate, and any add-ons get added on top. Recurring plans apply a discount automatically — 15% weekly, 10% biweekly, 5% monthly.</p>
+        <p>The <a href="index.html#quote">quote form</a> shows you the number in about a minute.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">2.</span> Is the estimate the final price?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>It's a range, and it's usually right. We confirm the exact figure before your first visit. If we arrive and the home needs materially more work than described, we stop and call you before doing anything that would change the price — we don't hand you a surprise invoice at the end.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">3.</span> What payment methods do you accept?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>Credit and debit card, bank transfer, Zelle, and check. Payment is due on the day of service unless you're on a recurring plan with billing arranged in advance.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">4.</span> Do I have to sign a contract?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>No. Recurring plans have no minimum term. Pause when you travel, skip a visit, or stop entirely — the discount just applies to visits you actually take.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">5.</span> Do your cleaners accept tips?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>Tips are never expected and never required — our crews are paid properly regardless. If you'd like to leave one, cash or an add to your card payment both work, and it goes to the crew that did your home.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">6.</span> Do you charge extra for pets?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>Not for having pets. There's an optional heavy pet hair add-on for homes where shedding needs extra time and specialized tools, but plenty of pet households never need it.</p></div>
+      </details>
+    </section>
+
+    <!-- PREP -->
+    <section class="grp" id="prep">
+      <div class="ghead">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6l1 4H8z"/><path d="M12 7v9"/><path d="M8 16h8l-1 5H9z"/></svg></span>
+        <h2>Preparing your home</h2>
+        <span class="n">4 questions</span>
+      </div>
+
+      <details class="qa">
+        <summary><span class="num">1.</span> How should I prepare before the crew arrives?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>A few minutes of pickup goes a long way — clearing counters and floors, putting away dishes and food, and moving anything fragile or valuable somewhere safe. Every surface we can reach is a surface we can clean.</p>
+        <p>You don't need to tidy for us. Just clear the way so the time goes into cleaning rather than sorting.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">2.</span> Can I have only certain rooms cleaned?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>Yes. Tell us which rooms to focus on or skip entirely — a lot of clients skip a home office or a guest room that never gets used. Pricing still starts from home size, but we'll put the time where you want it.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">3.</span> Can I leave special instructions?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>Please do. Notes go on your file, not just on one visit — the crew sees them every time. Things worth telling us: which floors need a gentle mop, a surface that scratches, a room to leave alone, a door that sticks, where the dog sleeps.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">4.</span> Do I need to secure my pets?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>Only if they'd be stressed by strangers, or if they'd bolt out an open door. We're comfortable working around dogs and cats who are comfortable with us. Let us know in advance either way so the crew isn't surprised.</p></div>
+      </details>
+    </section>
+
+    <!-- TEAM -->
+    <section class="grp" id="team">
+      <div class="ghead">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.2"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17.5" cy="9.5" r="2.4"/><path d="M17.5 14c2.5 0 4.5 2 4.5 4.5"/></svg></span>
+        <h2>Our team &amp; products</h2>
+        <span class="n">6 questions</span>
+      </div>
+
+      <details class="qa">
+        <summary><span class="num">1.</span> How many cleaners will you send?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>Depends on the home. Most recurring visits get a crew of two; deep cleans and move-outs often get three or four so the job finishes in one stretch. Home helper visits are always one person. We'll tell you the number when we confirm.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">2.</span> Will it be the same crew each time?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>That's the whole point of a recurring plan. Your crew learns your home, which means fewer instructions and better results over time. If someone's out sick we'll send a replacement who's been briefed on your file, and we'll tell you beforehand.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">3.</span> Are your cleaners background-checked and insured?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>Yes. Every person entering your home is background-checked, trained, and covered under our liability policy. They're our employees, not contractors pulled from an app.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">4.</span> Do you bring your own supplies?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>Everything — equipment, cleaners, cloths, vacuums. Nothing needed on your end.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">5.</span> Can you use green or fragrance-free products?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>Yes. There's a green-products add-on for a plant-based, fragrance-free line — worth it if anyone in the house has allergies, asthma, or you've got small kids crawling on the floors.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">6.</span> Can you use my own products instead?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>Absolutely, at no charge. Leave them out with a note. This is common with natural stone, sealed hardwood, and specialty finishes where the manufacturer specifies a particular cleaner. We'll follow your instructions but can't warranty results from products we don't know.</p></div>
+      </details>
+    </section>
+
+    <!-- ACCESS -->
+    <section class="grp" id="access">
+      <div class="ghead">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="4.5" width="17" height="16" rx="2.5"/><path d="M3.5 9.5h17"/><path d="M8 3v3M16 3v3"/><path d="M12 13v3.2l2 1"/></svg></span>
+        <h2>Access &amp; scheduling</h2>
+        <span class="n">6 questions</span>
+      </div>
+
+      <details class="qa">
+        <summary><span class="num">1.</span> Do I need to be home?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>No, and most clients aren't. A lockbox code, garage code, or key on file all work. Plenty of people are there for the first visit to meet the crew, then hand over access after that.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">2.</span> How does the arrival window work?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>We book a two-hour arrival window rather than an exact time, because homes ahead of yours occasionally run long and we'd rather finish those properly than rush out. You'll get a text when the crew is on the way.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">3.</span> Will I know when the team is coming and going?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>Yes. A text when they're en route, and another when they've finished and locked up. For move-out cleans you also get photos of the finished home.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">4.</span> Can I reschedule or cancel?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>Free up to 24 hours before your window. Inside 24 hours we may apply a partial fee, because the crew's day is already committed and that slot can't be refilled. Life happens — call us and we'll work it out.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">5.</span> What if you can't get in on the day?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>If a code doesn't work, a key isn't where it should be, or nobody answers, we'll call and wait a reasonable time. If we still can't get in, it's treated as a late cancellation. Double-check codes after any lock battery change — that's the usual culprit.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">6.</span> What if there's no water or power?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>We can't clean without both. If utilities are off when we arrive — common on move-out cleans where service was cancelled early — we'll have to reschedule, and it may count as a late cancellation. Confirm utilities stay on through your cleaning date.</p></div>
+      </details>
+    </section>
+
+    <!-- POLICIES -->
+    <section class="grp" id="policies">
+      <div class="ghead">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3.5v5c0 5-3.4 8.6-8 9.5-4.6-.9-8-4.5-8-9.5v-5z"/><path d="M12 8.5v4"/><path d="M12 16h.01"/></svg></span>
+        <h2>Policies &amp; limits</h2>
+        <span class="n">7 questions</span>
+      </div>
+
+      <details class="qa">
+        <summary><span class="num">1.</span> What isn't included?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>We don't handle exterior or second-story windows, carpet shampooing or steam extraction, mold remediation, pest control, biohazard or hoarding cleanup, post-construction debris, or anything requiring a ladder taller than two steps.</p>
+        <p>If your home needs one of these, tell us when you book. We'd rather refer you to someone who does it properly than send a crew who can't finish.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">2.</span> Do you move heavy furniture or appliances?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>No. We clean under and around anything light enough to shift safely, but we don't move sofas, beds, refrigerators, or washer-dryers — it's how people get hurt and how floors get gouged. If you move it beforehand, we'll happily clean behind it.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">3.</span> Do you guarantee removal of every stain or buildup?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>No, and be skeptical of anyone who does. Permanent staining, etched hard-water deposits, sun-faded surfaces, and damage from long-term wear often can't be reversed by cleaning — the surface itself has changed. We'll tell you honestly what we think will and won't come up.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">4.</span> Do you clean pet waste?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>No. Pet waste and litter boxes need to be handled before we arrive — it's a health and safety line we hold for our crews.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">5.</span> Can you refuse a job?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>Rarely, but yes. If we arrive to biohazards, infestation, extreme conditions, or an unsafe situation that wasn't disclosed, we may reschedule or decline. Telling us upfront is always better — we've seen a lot, and most things are workable when we can plan for them.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">6.</span> What if something gets damaged?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>We're insured, and we'll tell you before you notice. If a crew breaks something they report it that day, and we work with you on repair or replacement. Please put genuinely irreplaceable items somewhere we won't be cleaning — insurance covers value, not sentiment.</p></div>
+      </details>
+
+      <details class="qa">
+        <summary><span class="num">7.</span> What if I'm not happy with the clean?<svg class="chev"><use href="#chev"/></svg></summary>
+        <div class="ans"><p>Tell us within 24 hours and we come back and redo it at no charge. That's the entire policy — no forms, no debating what was on the checklist, no asking you to prove it.</p></div>
+      </details>
+    </section>
+
+    <!-- empty state -->
+    <div class="empty" id="empty">
+      <h2>No matches for that one.</h2>
+      <p>Try a different word, or just ask us directly — we answer every message the same day and we'll add good questions to this page.</p>
+      <a class="btn fill" href="mailto:home@zentrafacility.us">Email us your question</a>
+    </div>
+
+  </div>
+</div>
+
+<!-- ===== cta ===== -->
+<div class="cta-band">
+  <div class="wrap">
+    <h2>Still have a question?</h2>
+    <p>Ask us directly, or skip ahead and see what your home would cost.</p>
+    <div class="row">
+      <a class="btn fill" href="index.html#quote">Get my free estimate</a>
+      <a class="btn line" href="tel:+16502182133">Call (650) 218-2133</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fabout">
+        <a class="brand inv" href="index.html">
+          <svg style="color:var(--teal)"><use href="#zstar"/></svg>
+          <span class="wm"><b>zentra</b><span>Home</span></span>
+        </a>
+        <p>Residential cleaning across San Bruno and the Peninsula. The residential arm of Zentra Facility Solutions.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#deep">Initial deep clean</a></li>
+          <li><a href="services.html#recurring">Recurring cleaning</a></li>
+          <li><a href="services.html#move">Move in / move out</a></li>
+          <li><a href="services.html#helper">Home helper</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+16502182133">(650) 218-2133</a></li>
+          <li><a href="mailto:home@zentrafacility.us">home@zentrafacility.us</a></li>
+          <li>751 Kains Ave<br>San Bruno, CA 94066</li>
+        </ul>
+        <h4 style="margin-top:24px">Hours</h4>
+        <ul><li>Monday–Saturday<br>8:00 AM – 6:00 PM</li></ul>
+      </div>
+      <div>
+        <h4>Serving</h4>
+        <p class="serving">San Bruno, Millbrae, Burlingame, Hillsborough, San Mateo, Foster City, Belmont, San Carlos, Redwood City, South San Francisco, Daly City, Pacifica, and Colma.</p>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 Zentra Facility Solutions. All rights reserved.</span>
+      <span class="sp"><a href="#" style="text-decoration:none">Privacy Policy</a></span>
+      <span><a href="#" style="text-decoration:none">Terms &amp; Conditions</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var $=function(id){return document.getElementById(id);};
+  var input=$('q'), clr=$('clr'), count=$('count'), empty=$('empty'), jump=$('jump');
+  var groups=[].slice.call(document.querySelectorAll('.grp'));
+  var items=[].slice.call(document.querySelectorAll('.qa'));
+
+  // cache original text so highlighting never compounds
+  items.forEach(function(it){
+    it._sum=it.querySelector('summary');
+    it._label=it._sum.childNodes[1];              // the question text node
+    it._text=it._sum.textContent.toLowerCase()+' '+
+             it.querySelector('.ans').textContent.toLowerCase();
+    it._orig=it._label.nodeValue;
+  });
+
+  function reset(){
+    items.forEach(function(it){
+      it.classList.remove('hide');
+      it._label.nodeValue=it._orig;
+      it.open=false;
+    });
+    groups.forEach(function(g){
+      g.classList.remove('hide');
+      g.querySelector('.n').textContent=g.querySelectorAll('.qa').length+' questions';
+    });
+    items[0].open=true;
+    empty.classList.remove('on');
+    jump.style.display='';
+    count.textContent='';
+  }
+
+  function run(term){
+    if(!term){ reset(); clr.classList.remove('on'); return; }
+    clr.classList.add('on');
+    var hits=0;
+    items.forEach(function(it){
+      var match=it._text.indexOf(term)>-1;
+      it.classList.toggle('hide',!match);
+      it.open=match;
+      it._label.nodeValue=it._orig;
+      if(match) hits++;
+    });
+    groups.forEach(function(g){
+      var vis=g.querySelectorAll('.qa:not(.hide)').length;
+      g.classList.toggle('hide',vis===0);
+      g.querySelector('.n').textContent=vis+(vis===1?' match':' matches');
+    });
+    empty.classList.toggle('on',hits===0);
+    jump.style.display=hits===0?'none':'';
+    count.innerHTML=hits===0
+      ? 'No questions matched <b>'+esc(term)+'</b>.'
+      : '<b>'+hits+'</b> question'+(hits===1?'':'s')+' matched <b>'+esc(term)+'</b>.';
+  }
+  function esc(s){return s.replace(/[&<>"]/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c];});}
+
+  var t;
+  input.addEventListener('input',function(){
+    clearTimeout(t);
+    var v=input.value.trim().toLowerCase();
+    t=setTimeout(function(){run(v);},140);
+  });
+  clr.addEventListener('click',function(){ input.value=''; run(''); input.focus(); });
+  input.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){ input.value=''; run(''); }
+  });
+
+  // one open at a time inside a group keeps the page from ballooning
+  items.forEach(function(it){
+    it.addEventListener('toggle',function(){
+      if(!it.open || input.value.trim()) return;
+      var parent=it.closest('.grp');
+      [].forEach.call(parent.querySelectorAll('.qa'),function(o){
+        if(o!==it) o.open=false;
+      });
+    });
+  });
+
+  // mobile nav
+  var mb=$('menuBtn'), nav=$('nav');
+  mb.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    mb.setAttribute('aria-expanded',open?'true':'false');
+    mb.textContent=open?'Close':'Menu';
+  });
+  nav.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){nav.classList.remove('open');mb.textContent='Menu';}
+  });
+})();
+</script>
+</body>
+</html>

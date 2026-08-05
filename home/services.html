@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Services — Zentra Home | Residential cleaning on the Peninsula</title>
+<meta name="description" content="Deep cleaning, recurring cleaning, move in/out, and hourly home help across San Bruno and the Peninsula. See exactly what's included in each service.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Figtree:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0C2033;--navy-2:#16344F;--navy-3:#081726;
+  --teal:#17B3A6;--teal-2:#0E8F86;--teal-soft:#E4F6F4;
+  --warm:#F8F6F2;--warm-2:#F0ECE4;--line:#E2DCD2;--line-2:#EEE9E1;
+  --slate:#57697A;--slate-2:#7B8A99;
+  --r:18px;--wrap:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+[id]{scroll-margin-top:88px}
+body{margin:0;background:var(--warm);color:var(--navy);
+  font-family:"Figtree",system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.62;
+  -webkit-font-smoothing:antialiased}
+img,svg{display:block;max-width:100%}
+a{color:inherit}
+h1,h2,h3,h4{font-family:"Bricolage Grotesque","Figtree",sans-serif;font-weight:600;
+  letter-spacing:-.025em;margin:0;line-height:1.1}
+h1{font-size:clamp(2.3rem,5vw,3.6rem);line-height:1.05}
+h2{font-size:clamp(1.85rem,3.4vw,2.7rem)}
+h3{font-size:1.5rem}
+h4{font-size:.95rem}
+p{margin:0}
+a:focus-visible,button:focus-visible,summary:focus-visible{
+  outline:2.5px solid var(--teal-2);outline-offset:3px;border-radius:6px}
+
+.wrap{max-width:var(--wrap);margin:0 auto;padding:0 24px}
+.sec{padding:88px 0}
+.eyebrow{font-size:.72rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-2)}
+.lede{color:var(--slate);font-size:1.05rem;max-width:56ch}
+.head{max-width:660px;margin-bottom:46px}
+.head .eyebrow{display:block;margin-bottom:14px}
+.head h2+p{margin-top:16px}
+.center{margin-left:auto;margin-right:auto;text-align:center}
+.center .lede{margin-left:auto;margin-right:auto}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;
+  font-family:"Figtree",sans-serif;font-size:.96rem;font-weight:600;padding:15px 28px;
+  border-radius:999px;border:1.5px solid transparent;text-decoration:none;cursor:pointer;
+  transition:.18s;white-space:nowrap}
+.btn.fill{background:var(--navy);color:#fff}
+.btn.fill:hover{background:var(--navy-2);transform:translateY(-1px)}
+.btn.teal{background:var(--teal);color:var(--navy)}
+.btn.teal:hover{background:var(--teal-2);color:#fff}
+.btn.line{background:transparent;color:var(--navy);border-color:var(--navy)}
+.btn.line:hover{background:var(--navy);color:#fff}
+.btn.ghost{background:rgba(255,255,255,.1);color:#fff;border-color:rgba(255,255,255,.4)}
+.btn.ghost:hover{background:#fff;color:var(--navy)}
+.btn.sm{padding:11px 20px;font-size:.9rem}
+
+.brand{display:flex;align-items:center;gap:11px;text-decoration:none}
+.brand svg{width:30px;height:30px;flex:none}
+.brand .wm{display:flex;flex-direction:column;line-height:1}
+.brand .wm b{font-family:"Bricolage Grotesque",sans-serif;font-size:1.42rem;font-weight:700;letter-spacing:-.03em}
+.brand .wm span{font-size:.6rem;font-weight:600;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--slate-2);padding-top:4px;padding-left:2px}
+.brand.inv .wm b{color:#fff}
+.brand.inv .wm span{color:#8FA6BC}
+
+header{position:sticky;top:0;z-index:70;background:rgba(248,246,242,.93);
+  backdrop-filter:blur(12px);border-bottom:1px solid var(--line-2)}
+header .wrap{display:flex;align-items:center;gap:26px;padding-top:14px;padding-bottom:14px}
+nav{display:flex;gap:26px;margin-left:auto}
+nav a{text-decoration:none;font-size:.94rem;font-weight:500;color:var(--slate)}
+nav a:hover{color:var(--teal-2)}
+nav a.on{color:var(--navy);font-weight:600}
+.hact{display:flex;gap:10px;align-items:center}
+.menu-btn{display:none;margin-left:auto;background:none;border:1.5px solid var(--line);
+  border-radius:999px;padding:9px 16px;font-size:.85rem;font-weight:600;cursor:pointer;color:var(--navy)}
+
+.ph{position:relative;overflow:hidden;background:
+  linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 55%,var(--teal-2) 140%);
+  display:flex;align-items:center;justify-content:center}
+.ph img{width:100%;height:100%;object-fit:cover;position:relative;z-index:2}
+.ph .tag{position:absolute;z-index:1;color:rgba(255,255,255,.6);font-size:.72rem;font-weight:600;
+  letter-spacing:.1em;text-align:center;padding:16px;line-height:1.8}
+
+/* ---------- page hero ---------- */
+.phero{padding:56px 0 20px}
+.crumb{font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--slate-2);margin-bottom:18px}
+.crumb a{text-decoration:none}
+.crumb a:hover{color:var(--teal-2)}
+.phero .lede{margin-top:20px;font-size:1.1rem}
+
+/* ---------- chooser ---------- */
+.chooser{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:44px}
+.ch{background:#fff;border:1px solid var(--line-2);border-radius:16px;padding:20px;
+  text-decoration:none;transition:.18s;display:flex;flex-direction:column}
+.ch:hover{border-color:var(--teal-2);transform:translateY(-3px);box-shadow:0 14px 30px rgba(12,32,51,.09)}
+.ch .q{font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--teal-2);margin-bottom:10px}
+.ch b{font-size:1.02rem;font-weight:600;display:block;margin-bottom:6px}
+.ch p{font-size:.86rem;color:var(--slate)}
+.ch .go{margin-top:14px;font-size:.85rem;font-weight:600;color:var(--navy)}
+
+/* ---------- service blocks ---------- */
+.svc{padding:80px 0;border-top:1px solid var(--line-2)}
+.svc .wrap{display:grid;grid-template-columns:.92fr 1.08fr;gap:56px;align-items:start}
+.svc:nth-of-type(even) .art{order:2}
+.art .ph{border-radius:var(--r);aspect-ratio:4/3;box-shadow:0 18px 44px rgba(12,32,51,.12)}
+.art .price{background:#fff;border:1px solid var(--line);border-radius:16px;padding:20px 22px;
+  margin-top:18px}
+.art .price .n{font-family:"Bricolage Grotesque",sans-serif;font-size:2rem;font-weight:700;
+  line-height:1;color:var(--navy)}
+.art .price .u{font-size:.84rem;color:var(--slate);margin-top:6px}
+.art .price .btn{width:100%;margin-top:16px}
+.svc .tagline{display:inline-block;font-size:.72rem;font-weight:700;letter-spacing:.14em;
+  text-transform:uppercase;color:var(--teal-2);background:var(--teal-soft);
+  border-radius:99px;padding:6px 14px;margin-bottom:16px}
+.svc h2{font-size:clamp(1.8rem,3.2vw,2.5rem)}
+.svc .intro{color:var(--slate);margin-top:16px;font-size:1.02rem}
+.svc .best{background:#fff;border-left:3px solid var(--teal);border-radius:0 12px 12px 0;
+  padding:16px 20px;margin-top:22px;font-size:.92rem}
+.svc .best b{display:block;font-weight:600;margin-bottom:3px}
+.svc .best span{color:var(--slate)}
+
+.checks{margin-top:28px;border-top:1px solid var(--line-2)}
+.checks details{border-bottom:1px solid var(--line-2)}
+.checks summary{display:flex;align-items:center;gap:14px;padding:15px 0;cursor:pointer;
+  font-weight:600;font-size:.98rem;list-style:none}
+.checks summary::-webkit-details-marker{display:none}
+.checks summary::after{content:"+";margin-left:auto;font-size:1.2rem;color:var(--teal-2);
+  transition:transform .2s;flex:none}
+.checks details[open] summary::after{transform:rotate(45deg)}
+.checks ul{list-style:none;margin:0;padding:0 0 18px;display:grid;
+  grid-template-columns:1fr 1fr;gap:8px 20px}
+.checks li{font-size:.88rem;color:var(--slate);padding-left:22px;position:relative}
+.checks li::before{content:"";position:absolute;left:0;top:.42em;width:11px;height:6px;
+  border-left:2px solid var(--teal);border-bottom:2px solid var(--teal);transform:rotate(-45deg)}
+
+/* ---------- add-ons ---------- */
+.addons{background:var(--warm-2)}
+.agrid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.ad{background:#fff;border:1px solid var(--line-2);border-radius:14px;padding:20px 22px;
+  display:flex;align-items:flex-start;gap:16px}
+.ad .amt{font-family:"Bricolage Grotesque",sans-serif;font-weight:700;font-size:1.05rem;
+  color:var(--teal-2);flex:none;min-width:52px}
+.ad b{display:block;font-size:.96rem;font-weight:600}
+.ad p{font-size:.84rem;color:var(--slate);margin-top:4px}
+
+/* ---------- honest section ---------- */
+.honest{background:var(--navy);color:#fff}
+.honest h2{color:#fff}
+.honest .lede{color:#A7BACB}
+.hgrid{display:grid;grid-template-columns:1fr 1fr;gap:44px;margin-top:8px}
+.hcol h4{font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--teal);margin-bottom:18px}
+.hcol ul{list-style:none;margin:0;padding:0;display:grid;gap:11px}
+.hcol li{font-size:.92rem;color:#C6D5E1;padding-left:26px;position:relative}
+.hcol.yes li::before{content:"";position:absolute;left:0;top:.42em;width:11px;height:6px;
+  border-left:2px solid var(--teal);border-bottom:2px solid var(--teal);transform:rotate(-45deg)}
+.hcol.no li::before{content:"×";position:absolute;left:2px;top:-.06em;color:#7B8A99;font-size:1.15rem}
+.honest .foot{margin-top:36px;font-size:.9rem;color:#A7BACB;max-width:60ch}
+.honest .foot a{color:var(--teal);font-weight:600}
+
+/* ---------- cta ---------- */
+.cta-band{background:var(--teal);color:var(--navy);text-align:center}
+.cta-band .wrap{padding:76px 24px}
+.cta-band h2{max-width:20ch;margin:0 auto}
+.cta-band p{margin:16px auto 0;max-width:52ch;color:#0A4F4A;font-size:1.02rem}
+.cta-band .row{display:flex;gap:12px;justify-content:center;margin-top:30px;flex-wrap:wrap}
+
+/* ---------- footer ---------- */
+footer{background:var(--navy-3);color:#A7BACB}
+footer .wrap{padding-top:64px;padding-bottom:40px}
+.fgrid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:40px}
+.fgrid h4{font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;
+  color:#fff;margin:0 0 16px}
+.fgrid p,.fgrid li{font-size:.88rem}
+.fgrid ul{list-style:none;margin:0;padding:0;display:grid;gap:9px}
+.fgrid a{text-decoration:none}
+.fgrid a:hover{color:var(--teal)}
+.fabout p{margin-top:18px;max-width:32ch}
+.serving{font-size:.86rem;line-height:1.9}
+.fbot{margin-top:52px;padding-top:24px;border-top:1px solid rgba(255,255,255,.1);
+  display:flex;gap:20px;flex-wrap:wrap;font-size:.8rem}
+.fbot .sp{margin-left:auto}
+
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}
+.rv.in{opacity:1;transform:none}
+
+@media(max-width:1000px){
+  nav{display:none}
+  nav.open{display:flex;position:absolute;top:100%;left:0;right:0;background:#fff;
+    flex-direction:column;gap:0;padding:6px 24px 16px;border-bottom:1px solid var(--line);
+    box-shadow:0 14px 30px rgba(12,32,51,.1)}
+  nav.open a{padding:13px 0;border-bottom:1px solid var(--line-2)}
+  .menu-btn{display:block}
+  header .wrap{position:relative}
+  .hact{display:none}
+  .chooser{grid-template-columns:1fr 1fr}
+  .svc .wrap{grid-template-columns:1fr;gap:34px}
+  .svc:nth-of-type(even) .art{order:0}
+  .agrid{grid-template-columns:1fr 1fr}
+  .hgrid{grid-template-columns:1fr;gap:32px}
+  .fgrid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:620px){
+  body{font-size:16px}
+  .sec,.svc{padding:56px 0}
+  .wrap{padding:0 18px}
+  .chooser{grid-template-columns:1fr}
+  .checks ul{grid-template-columns:1fr}
+  .agrid{grid-template-columns:1fr}
+  .fgrid{grid-template-columns:1fr}
+}
+@media(prefers-reduced-motion:reduce){
+  *{animation-duration:.001ms!important;transition-duration:.001ms!important}
+  html{scroll-behavior:auto}.rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+  <symbol id="zstar" viewBox="0 0 32 32">
+    <path d="M16 1.5c.9 5.6 2.4 8.9 5 11 2.5 2.1 5.6 2.9 9.5 3.5-3.9.6-7 1.4-9.5 3.5-2.6 2.1-4.1 5.4-5 11-.9-5.6-2.4-8.9-5-11-2.5-2.1-5.6-2.9-9.5-3.5 3.9-.6 7-1.4 9.5-3.5 2.6-2.1 4.1-5.4 5-11z" fill="currentColor"/>
+  </symbol>
+</defs></svg>
+
+<header>
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <svg style="color:var(--teal-2)"><use href="#zstar"/></svg>
+      <span class="wm"><b>zentra</b><span>Home</span></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="nav">Menu</button>
+    <nav id="nav">
+      <a class="on" href="services.html">Services</a>
+      <a href="index.html#how">How it works</a>
+      <a href="index.html#areas">Areas</a>
+      <a href="faq.html">FAQ</a>
+    </nav>
+    <div class="hact">
+      <a class="btn line sm" href="tel:+16502182133">(650) 218-2133</a>
+      <a class="btn fill sm" href="index.html#quote">Get a free quote</a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== page hero ===== -->
+<section class="phero">
+  <div class="wrap">
+    <div class="crumb"><a href="index.html">Home</a> / Services</div>
+    <span class="eyebrow">What we do</span>
+    <h1 style="margin-top:14px">Cleaning services, spelled out.</h1>
+    <p class="lede">No vague packages. Below is exactly what each service covers, room by room, and what it costs — so you can decide before you ever talk to us.</p>
+
+    <div class="chooser rv">
+      <a class="ch" href="#deep">
+        <span class="q">Start here</span>
+        <b>First time with us?</b>
+        <p>Almost every home starts with a deep clean to reset the baseline.</p>
+        <span class="go">Initial deep clean →</span>
+      </a>
+      <a class="ch" href="#recurring">
+        <span class="q">Keep it up</span>
+        <b>Already deep cleaned?</b>
+        <p>Lock in a weekly, biweekly, or monthly rhythm at a lower rate.</p>
+        <span class="go">Recurring cleaning →</span>
+      </a>
+      <a class="ch" href="#move">
+        <span class="q">Deposit back</span>
+        <b>Moving in or out?</b>
+        <p>Empty-home cleaning done to a landlord's checklist, with photos.</p>
+        <span class="go">Move in / move out →</span>
+      </a>
+      <a class="ch" href="#helper">
+        <span class="q">By the hour</span>
+        <b>Need more than cleaning?</b>
+        <p>Laundry, organizing, errands — one person, your priority list.</p>
+        <span class="go">Home helper →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 1. deep clean ===== -->
+<section class="svc" id="deep">
+  <div class="wrap">
+    <div class="art rv">
+      <div class="ph"><span class="tag">assets/home/deep-clean.jpg</span>
+        <img src="assets/home/deep-clean.jpg" alt="Crew deep cleaning a kitchen" onerror="this.remove()"></div>
+      <div class="price">
+        <div class="n">From $320</div>
+        <div class="u">A typical 1,800 sq ft, 3 bed / 2.5 bath home runs about $411. Priced by size, bedrooms, and bathrooms.</div>
+        <a class="btn teal" href="index.html?svc=deep#quote">Price my deep clean</a>
+      </div>
+    </div>
+    <div class="rv">
+      <span class="tagline">Most homes start here</span>
+      <h2>Initial deep clean</h2>
+      <p class="intro">A full reset. We work top to bottom on the build-up a regular clean never reaches — grout lines, baseboards, vent covers, the tops of door frames, behind the toilet. It takes a crew and a few hours, and it's what makes every visit after it fast.</p>
+      <div class="best"><b>Best for</b><span>First-time clients, homes that haven't had a professional clean in six months or more, or getting ready to host.</span></div>
+
+      <div class="checks">
+        <details open>
+          <summary>Kitchen</summary>
+          <ul>
+            <li>Counters and backsplash degreased</li><li>Cabinet fronts wiped down</li>
+            <li>Sink scrubbed, fixtures polished</li><li>Appliance exteriors</li>
+            <li>Inside the microwave</li><li>Range hood and stovetop</li>
+            <li>Floors swept and mopped</li><li>Baseboards and trim</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Bathrooms</summary>
+          <ul>
+            <li>Tub and shower scrubbed</li><li>Grout and tile treated</li>
+            <li>Toilet inside, outside, and base</li><li>Vanity and sink</li>
+            <li>Mirrors and glass</li><li>Fixtures descaled</li>
+            <li>Floors and baseboards</li><li>Exhaust fan cover dusted</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Bedrooms and living areas</summary>
+          <ul>
+            <li>All surfaces dusted</li><li>Ceiling fans and light fixtures</li>
+            <li>Window sills and tracks</li><li>Mirrors and glass</li>
+            <li>Under accessible furniture</li><li>Beds made or linens changed</li>
+            <li>Floors vacuumed and mopped</li><li>Baseboards and door frames</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Throughout the home</summary>
+          <ul>
+            <li>Cobwebs removed</li><li>Switch plates and door handles</li>
+            <li>Stair treads and railings</li><li>Interior doors wiped</li>
+            <li>Trash emptied and relined</li><li>Entry and hallway floors</li>
+          </ul>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 2. recurring ===== -->
+<section class="svc" id="recurring">
+  <div class="wrap">
+    <div class="art rv">
+      <div class="ph"><span class="tag">assets/home/recurring.jpg</span>
+        <img src="assets/home/recurring.jpg" alt="Crew doing a recurring home cleaning" onerror="this.remove()"></div>
+      <div class="price">
+        <div class="n">From $165<span style="font-size:1rem;font-weight:500"> / visit</span></div>
+        <div class="u">Weekly saves 15%, biweekly 10%, monthly 5%. No contract — pause or cancel any time.</div>
+        <a class="btn teal" href="index.html?svc=recurring#quote">See my recurring rate</a>
+      </div>
+    </div>
+    <div class="rv">
+      <span class="tagline">Weekly · Biweekly · Monthly</span>
+      <h2>Recurring cleaning</h2>
+      <p class="intro">The visit that keeps your deep clean holding. Same crew, same day slot, so they learn your home — which floors need the gentle mop, which room the dog sleeps in, what you actually care about. Skip a week when you're traveling; there's no fee for it.</p>
+      <div class="best"><b>Best for</b><span>Busy households that want to stop thinking about it. Most Peninsula families land on biweekly.</span></div>
+
+      <div class="checks">
+        <details open>
+          <summary>Every visit includes</summary>
+          <ul>
+            <li>Kitchen counters and sink</li><li>Appliance exteriors</li>
+            <li>All bathrooms cleaned and sanitized</li><li>Dusting throughout</li>
+            <li>Mirrors and glass surfaces</li><li>Beds made</li>
+            <li>All floors vacuumed and mopped</li><li>Trash emptied and relined</li>
+          </ul>
+        </details>
+        <details>
+          <summary>On a rotation, so nothing is skipped</summary>
+          <ul>
+            <li>Baseboards, one zone per visit</li><li>Interior window sills</li>
+            <li>Ceiling fans and light fixtures</li><li>Cabinet fronts</li>
+            <li>Door frames and switch plates</li><li>Under accessible furniture</li>
+          </ul>
+        </details>
+        <details>
+          <summary>How the plan works</summary>
+          <ul>
+            <li>Discount applied automatically</li><li>Same crew each visit</li>
+            <li>Reschedule free up to 24 hours out</li><li>Pause any time, no penalty</li>
+            <li>Priority booking around holidays</li><li>Add extras visit by visit</li>
+          </ul>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 3. move ===== -->
+<section class="svc" id="move">
+  <div class="wrap">
+    <div class="art rv">
+      <div class="ph"><span class="tag">assets/home/move-out.jpg</span>
+        <img src="assets/home/move-out.jpg" alt="Empty home being cleaned for a move-out" onerror="this.remove()"></div>
+      <div class="price">
+        <div class="n">From $380</div>
+        <div class="u">Photos of the finished home sent to you — useful evidence if a deposit gets disputed.</div>
+        <a class="btn teal" href="index.html?svc=move#quote">Get move-out pricing</a>
+      </div>
+    </div>
+    <div class="rv">
+      <span class="tagline">Deposit-back clean</span>
+      <h2>Move in / move out</h2>
+      <p class="intro">An empty home cleans differently — every cabinet is open, every closet is bare, and a property manager is going to run a finger along the shelf. We clean to that standard and send you photos when we lock up, so you have something to point at if the deposit conversation gets awkward.</p>
+      <div class="best"><b>Best for</b><span>End-of-lease cleanings, home sales, and landlords turning a unit between tenants.</span></div>
+
+      <div class="checks">
+        <details open>
+          <summary>What makes it different from a deep clean</summary>
+          <ul>
+            <li>Inside every cabinet and drawer</li><li>Inside all closets and shelving</li>
+            <li>Inside oven and refrigerator included</li><li>Window tracks and sills</li>
+            <li>Blinds dusted slat by slat</li><li>Light fixtures and globes</li>
+            <li>Wall scuff spot-treatment</li><li>Garage or storage sweep-out</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Standard throughout</summary>
+          <ul>
+            <li>All bathrooms deep sanitized</li><li>Kitchen fully degreased</li>
+            <li>Baseboards and door frames</li><li>Switch plates and outlets</li>
+            <li>Floors vacuumed and mopped</li><li>Final walkthrough photos</li>
+          </ul>
+        </details>
+        <details>
+          <summary>Scheduling around your move</summary>
+          <ul>
+            <li>Booked around your key handoff</li><li>Access by lockbox or agent</li>
+            <li>Same-day turnarounds when possible</li><li>Landlord checklist honored if you send it</li>
+          </ul>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 4. helper ===== -->
+<section class="svc" id="helper">
+  <div class="wrap">
+    <div class="art rv">
+      <div class="ph"><span class="tag">assets/home/helper.jpg</span>
+        <img src="assets/home/helper.jpg" alt="Home helper organizing a closet" onerror="this.remove()"></div>
+      <div class="price">
+        <div class="n">$75<span style="font-size:1rem;font-weight:500"> / hour</span></div>
+        <div class="u">Three-hour minimum. Same helper each visit once you find someone who fits.</div>
+        <a class="btn teal" href="index.html?svc=helper#quote">Check availability</a>
+      </div>
+    </div>
+    <div class="rv">
+      <span class="tagline">Billed hourly</span>
+      <h2>Dedicated home helper</h2>
+      <p class="intro">One person, your list, your priorities. Some clients use it for cleaning plus laundry. Others use it to get the guest room ready, break down a closet that's gotten out of hand, or handle the pile of small things that never make it to the top of the weekend.</p>
+      <div class="best"><b>Best for</b><span>New parents, people recovering from surgery, anyone caring for a family member, and households where the need changes week to week.</span></div>
+
+      <div class="checks">
+        <details open>
+          <summary>What they can take on</summary>
+          <ul>
+            <li>Cleaning, any room you choose</li><li>Laundry, folding, and putting away</li>
+            <li>Closet and pantry organizing</li><li>Dishes and kitchen reset</li>
+            <li>Bed linens and guest room prep</li><li>Unpacking after a move</li>
+            <li>Light meal prep</li><li>Local errands and pickups</li>
+          </ul>
+        </details>
+        <details>
+          <summary>How it works</summary>
+          <ul>
+            <li>You set the priorities that day</li><li>Three-hour minimum per visit</li>
+            <li>Book one-off or standing weekly</li><li>Same helper once you request them</li>
+            <li>Billed to the quarter hour after the minimum</li><li>Supplies included for cleaning tasks</li>
+          </ul>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== add-ons ===== -->
+<section class="sec addons">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Add-ons</span>
+      <h2>Extras, priced up front.</h2>
+      <p class="lede">Add any of these to any service. Pick them in the quote form and watch the total update — nothing gets tacked on afterward.</p>
+    </div>
+    <div class="agrid rv">
+      <div class="ad"><span class="amt">$35</span><div><b>Inside the oven</b>
+        <p>Racks pulled, interior degreased, door glass cleared.</p></div></div>
+      <div class="ad"><span class="amt">$35</span><div><b>Inside the fridge</b>
+        <p>Shelves and drawers removed, washed, and reset. Empty it first if you can.</p></div></div>
+      <div class="ad"><span class="amt">$60</span><div><b>Interior windows</b>
+        <p>Glass, sills, and tracks on the inside. We don't do exterior or second-story.</p></div></div>
+      <div class="ad"><span class="amt">$30</span><div><b>Laundry and linens</b>
+        <p>One or two loads washed, dried, folded. Beds stripped and remade.</p></div></div>
+      <div class="ad"><span class="amt">$75</span><div><b>Garage sweep-out</b>
+        <p>Floor swept, cobwebs cleared, surfaces wiped. Doesn't include organizing.</p></div></div>
+      <div class="ad"><span class="amt">$45</span><div><b>Heavy pet hair</b>
+        <p>Extra time and specialized tools for upholstery, corners, and baseboards.</p></div></div>
+      <div class="ad"><span class="amt">$40</span><div><b>Inside cabinets</b>
+        <p>Emptied shelves wiped down. Included free with move in / move out.</p></div></div>
+      <div class="ad"><span class="amt">$25</span><div><b>Green products only</b>
+        <p>Plant-based, fragrance-free line for allergies, pets, or small kids.</p></div></div>
+      <div class="ad"><span class="amt">$0</span><div><b>Your own supplies</b>
+        <p>Leave out what you want used — stone cleaner, a specific mop — at no charge.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== honest scope ===== -->
+<section class="sec honest">
+  <div class="wrap">
+    <div class="head rv" style="margin-bottom:36px">
+      <span class="eyebrow" style="color:var(--teal)">Straight answers</span>
+      <h2>What we do and don't take on.</h2>
+      <p class="lede">Worth reading before you book. Nobody enjoys finding out on the day.</p>
+    </div>
+    <div class="hgrid rv">
+      <div class="hcol yes">
+        <h4>Always included, no extra charge</h4>
+        <ul>
+          <li>All equipment, cleaners, and cloths</li>
+          <li>Moving light furniture to clean underneath</li>
+          <li>Following your notes on products and problem spots</li>
+          <li>Text when we arrive and again when we lock up</li>
+          <li>A redo within 24 hours if something's missed</li>
+          <li>Working around pets who are comfortable with us</li>
+        </ul>
+      </div>
+      <div class="hcol no">
+        <h4>Not something we handle</h4>
+        <ul>
+          <li>Exterior or second-story windows</li>
+          <li>Carpet shampooing or steam extraction</li>
+          <li>Mold remediation and pest control</li>
+          <li>Biohazard, crime scene, or hoarding cleanup</li>
+          <li>Post-construction debris and drywall dust</li>
+          <li>Moving heavy furniture or appliances</li>
+          <li>Climbing above a two-step ladder</li>
+        </ul>
+      </div>
+    </div>
+    <p class="foot">If your home needs something on the right-hand list, say so when you book. We'd rather point you to someone who does it properly than send a crew who can't finish the job. For the bigger commercial version of all this — offices, medical suites, government facilities — that's <a href="#">Zentra Facility Solutions</a>.</p>
+  </div>
+</section>
+
+<!-- ===== cta ===== -->
+<div class="cta-band">
+  <div class="wrap">
+    <h2>Ready to see your price?</h2>
+    <p>Four questions, a real number, and no phone tag. Takes about a minute.</p>
+    <div class="row">
+      <a class="btn fill" href="index.html#quote">Get my free estimate</a>
+      <a class="btn line" href="tel:+16502182133">Call (650) 218-2133</a>
+    </div>
+  </div>
+</div>
+
+<!-- ===== footer ===== -->
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div class="fabout">
+        <a class="brand inv" href="index.html">
+          <svg style="color:var(--teal)"><use href="#zstar"/></svg>
+          <span class="wm"><b>zentra</b><span>Home</span></span>
+        </a>
+        <p>Residential cleaning across San Bruno and the Peninsula. The residential arm of Zentra Facility Solutions.</p>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#deep">Initial deep clean</a></li>
+          <li><a href="#recurring">Recurring cleaning</a></li>
+          <li><a href="#move">Move in / move out</a></li>
+          <li><a href="#helper">Home helper</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+16502182133">(650) 218-2133</a></li>
+          <li><a href="mailto:home@zentrafacility.us">home@zentrafacility.us</a></li>
+          <li>751 Kains Ave<br>San Bruno, CA 94066</li>
+        </ul>
+        <h4 style="margin-top:24px">Hours</h4>
+        <ul><li>Monday–Saturday<br>8:00 AM – 6:00 PM</li></ul>
+      </div>
+      <div>
+        <h4>Serving</h4>
+        <p class="serving">San Bruno, Millbrae, Burlingame, Hillsborough, San Mateo, Foster City, Belmont, San Carlos, Redwood City, South San Francisco, Daly City, Pacifica, and Colma.</p>
+      </div>
+    </div>
+    <div class="fbot">
+      <span>© 2026 Zentra Facility Solutions. All rights reserved.</span>
+      <span class="sp"><a href="#" style="text-decoration:none">Privacy Policy</a></span>
+      <span><a href="#" style="text-decoration:none">Terms &amp; Conditions</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var mb=document.getElementById('menuBtn'), nav=document.getElementById('nav');
+  mb.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    mb.setAttribute('aria-expanded',open?'true':'false');
+    mb.textContent=open?'Close':'Menu';
+  });
+  nav.addEventListener('click',function(e){
+    if(e.target.tagName==='A'){nav.classList.remove('open');mb.textContent='Menu';}
+  });
+
+  var rv=[].slice.call(document.querySelectorAll('.rv'));
+  if(!matchMedia('(prefers-reduced-motion: reduce)').matches && 'IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){
+      if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},
+      {threshold:.1,rootMargin:'0px 0px -40px 0px'});
+    rv.forEach(function(el){io.observe(el);});
+  } else { rv.forEach(function(el){el.classList.add('in');}); }
+})();
+</script>
+</body>
+</html>
